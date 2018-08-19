@@ -59,7 +59,7 @@ def main():
             board.printBoard()
             exit()
 
-        if currentPlayer = player1:
+        if currentPlayer == player1:
             currentPlayer = player2
         else:
             currentPlayer = player1
