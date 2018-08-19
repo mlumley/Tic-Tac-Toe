@@ -2,11 +2,12 @@
 
 Requires Python3
 
-To run cd to the directory and run TTT.py
+To run, open the directory you cloned the repo and run TTT.py
 
 Coordinates must be in the following format to be accepted:
-    n,m
-    where n and m are betwenn 1 and 3
+
+    n,m    where n and m are between 1 and 3
+    
 To exit at any time type 'q'
 
 ## Assumptions
