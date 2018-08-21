@@ -12,4 +12,5 @@ To exit at any time type 'q'
 
 ## Assumptions
 The board starts at 1,1 in the top left and ends at 3,3 in the bottom right
+
 The board must be square, that is there are the same number of rows as columns
