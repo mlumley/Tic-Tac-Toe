@@ -1,8 +1,7 @@
 from Coordinate import Coordinate
 from Player import Player
 from Board import Board
-from Error import Error
-from Error import InvalidCoordinateLengthError
+from Error import Error, InvalidCoordinateLengthError
 
 def processUserInput(player):
     """

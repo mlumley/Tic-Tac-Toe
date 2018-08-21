@@ -1,6 +1,6 @@
 # Tic-Tac-Toe
 
-Requires Python3
+Requires Python 3.7
 
 To run, open the directory you cloned the repo and run TTT.py
 
