@@ -4,6 +4,8 @@ Requires Python 3.7
 
 To run, open the directory you cloned the repo and run TTT.py
 
+Using python ttt.py
+
 Coordinates must be in the following format to be accepted:
 
     n,m    where n and m are between 1 and 3
