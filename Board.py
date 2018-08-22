@@ -49,18 +49,20 @@ class Board():
                 won = True
         
         # Check columns
+        # Transpose the board
         tBoard = map(list, zip(*self.board))
-        for row in tBoard:
-            if row[1:] == row[:-1] and row[0] != '.':
+        for col in tBoard:
+            if col[1:] == col[:-1] and col[0] != '.':
                 won = True
 
         # Check diagonals
-        diagDown = []
-        diagUp = []
+        diagLeftRight = []
+        diagRightLeft = []
         for i in range(0, len(self.board)):
-            diagDown.append(self.board[i][i])
-            diagUp.append(self.board[i][len(self.board)-i-1])
-        if diagDown[1:] == diagDown[:-1] and diagDown[0] != '.' or diagUp[1:] == diagUp[:-1] and diagUp[0] != '.':
+            diagLeftRight.append(self.board[i][i])
+            diagRightLeft.append(self.board[i][len(self.board)-i-1])
+        if diagLeftRight[1:] == diagLeftRight[:-1] and diagLeftRight[0] != '.' or \
+            diagRightLeft[1:] == diagRightLeft[:-1] and diagRightLeft[0] != '.':
             won = True
 
         return won
