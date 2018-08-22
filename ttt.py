@@ -51,12 +51,10 @@ def main():
 
         if board.hasWon():
             print("Well done, you've won the game!")
-            board.printBoard()
             exit()
 
         if board.hasDrawn():
             print("The game is drawn!")
-            board.printBoard()
             exit()
 
         if currentPlayer == player1:
