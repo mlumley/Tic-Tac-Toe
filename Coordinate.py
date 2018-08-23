@@ -15,7 +15,7 @@ class Coordinate():
         try:
             return int(val)
         except:
-            raise InvalidCoordinateValueError("Error: Invalid coordinate values. Try again")
+            raise InvalidCoordinateValueError("Error: Invalid coordinate values. Coordinates should be integer values")
 
     def add(self, val):
         """

@@ -39,7 +39,7 @@ class Board():
         and unoccupied
         """
         if coordinate.x < 0 or coordinate.x >= len(self.board) or coordinate.y < 0 or coordinate.y >= len(self.board):
-            raise InvalidActionError("Error: Please enter a coord x,y between 1 and " + str(len(self.board)))
+            raise InvalidActionError("Error: Please enter a coordinate x,y with values between 1 and " + str(len(self.board)))
         
         elif self.board[coordinate.x][coordinate.y] != '.':
             raise InvalidActionError("Error: There is already a piece at this position. Try again")

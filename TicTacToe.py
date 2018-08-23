@@ -19,7 +19,7 @@ def processUserInput(player):
     action = action.split(',')
 
     if len(action) != 2:
-        raise InvalidCoordinateLengthError("Error: Invalid coordinate length. Try again")
+        raise InvalidCoordinateLengthError("Error: Invalid coordinate length. Coordinates should be of the format x,y")
     else:
         coord = Coordinate(action[0], action[1])
         # Convert coordinate from 1 based to 0 based
