@@ -23,7 +23,8 @@ def processUserInput(player):
     else:
         coord = Coordinate(action[0], action[1])
         # Convert coordinate from 1 based to 0 based
-        return coord.subtract(1)
+        coord.subtract(1)
+        return coord
 
 
 def main():
@@ -50,7 +51,7 @@ def main():
             continue
 
         if board.hasWon():
-            print("Well done, you've won the game!")
+            print("Well done Player " + currentPlayer.id + ", you've won the game!")
             board.printBoard()
             exit()
 
