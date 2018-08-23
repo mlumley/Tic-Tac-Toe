@@ -2,7 +2,7 @@
 
 Requires Python 3.7
 
-To run, open the directory you cloned the repo and run TTT.py
+To run, open the directory you cloned the repo and run TicTacToe.py
 
 Using python ttt.py
 
