@@ -2,9 +2,9 @@
 
 Requires Python 3.7
 
-To run, open the directory you cloned the repo and run TicTacToe.py
+To run, open the directory you cloned the repo and run ticTacToe.py
 
-Using python ttt.py
+Using python ticTacToe.py
 
 Coordinates must be in the following format to be accepted:
 
