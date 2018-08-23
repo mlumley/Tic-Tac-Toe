@@ -14,8 +14,16 @@ class Board():
         Prints the current state of the board to the terminal
         """
         print("Here's the current board:")
+        
+        print("  ", end="")
+        for i in range(1,len(self.board) + 1):
+            print(i, end=" ")
+        print("")
+
+        i = 1
         for row in self.board:
-            print(' '.join(row))
+            print(str(i) + " " + ' '.join(row))
+            i += 1
         print('\n')
 
     def markBoard(self, player, coordinate):
