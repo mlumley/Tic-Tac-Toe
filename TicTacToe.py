@@ -4,6 +4,8 @@ from Board import Board
 from Error import Error
 from Error import InvalidCoordinateLengthError
 
+BOARD_SIZE = 3
+
 def processUserInput(player):
     """
     Get player input from the terminal and return a coordinate
@@ -31,7 +33,7 @@ def main():
     """
     Contains the main game loop
     """
-    board = Board(3)
+    board = Board(BOARD_SIZE)
 
     player1 = Player('1', 'X')
     player2 = Player('2', 'O')
