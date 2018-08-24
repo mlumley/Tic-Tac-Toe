@@ -4,7 +4,10 @@ Requires Python 3.7
 
 To run, open the directory you cloned the repo and run ticTacToe.py
 
-Using python ticTacToe.py
+Using
+```bash
+./ticTacToe.py
+```
 
 Coordinates must be in the following format to be accepted:
 
