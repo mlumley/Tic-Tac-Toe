@@ -10,9 +10,6 @@ class Board():
         self.numMoves = 0
 
     def printBoard(self):
-        """
-        Prints the current state of the board to the terminal
-        """
         print("\nHere's the current board:")
 
         print("  ", end="")
@@ -45,9 +42,6 @@ class Board():
             raise InvalidActionError("Error: There is already a piece at this position. Try again")
 
     def hasWon(self):
-        """
-        Check if there is a winner on the board
-        """
         won = False
 
         # Check rows
@@ -75,7 +69,4 @@ class Board():
         return won
 
     def hasDrawn(self):
-        """
-        Check if a draw has occured
-        """
         return self.numMoves >= len(self.board)**2
