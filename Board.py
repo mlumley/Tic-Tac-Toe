@@ -42,21 +42,20 @@ class Board():
             raise InvalidActionError("Error: There is already a piece at this position. Try again")
 
     def hasWon(self):
-        won = False
+        return self.checkRows() or self.checkColumns() or self.checkDiagonals()
 
-        # Check rows
+    def checkRows(self):
         for row in self.board:
             if row[1:] == row[:-1] and row[0] != '.':
-                won = True
-        
-        # Check columns
-        # Transpose the board
+                return True
+
+    def checkColumns(self):
         tBoard = map(list, zip(*self.board))
         for col in tBoard:
             if col[1:] == col[:-1] and col[0] != '.':
-                won = True
+                return True
 
-        # Check diagonals
+    def checkDiagonals(self):
         diagLeftRight = []
         diagRightLeft = []
         for i in range(0, len(self.board)):
@@ -64,9 +63,7 @@ class Board():
             diagRightLeft.append(self.board[i][len(self.board)-i-1])
         if diagLeftRight[1:] == diagLeftRight[:-1] and diagLeftRight[0] != '.' or \
             diagRightLeft[1:] == diagRightLeft[:-1] and diagRightLeft[0] != '.':
-            won = True
-
-        return won
+            return True
 
     def hasDrawn(self):
         return self.numMoves >= len(self.board)**2
