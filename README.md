@@ -6,7 +6,7 @@ To run, open the directory you cloned the repo and run ticTacToe.py
 
 Using
 ```bash
-./ticTacToe.py
+python3 ticTacToe.py
 ```
 
 Coordinates must be in the following format to be accepted:
