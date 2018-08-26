@@ -3,6 +3,10 @@ from Error import InvalidCoordinateLengthError
 
 
 class UserInput():
+    """
+    Responsible for getting and parsing user input
+    """
+
     def processUserInput(self, player):
         """
         Get player input from the terminal and return a coordinate
@@ -26,8 +30,8 @@ class UserInput():
         if len(action) != 2:
             raise InvalidCoordinateLengthError(
                 (
-                    "Error: Invalid coordinate length."
-                    " Coordinates should be of the format x,y"
+                    "Error: Invalid coordinate length. "
+                    "Coordinates should be of the format x,y"
                 )
             )
         else:
