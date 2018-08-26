@@ -11,7 +11,7 @@ def main():
     """
     Contains the main game loop
     """
-    board = Board(BOARD_SIZE)
+    board = Board(BOARD_SIZE, '.')
 
     player1 = Player('1', 'X')
     player2 = Player('2', 'O')

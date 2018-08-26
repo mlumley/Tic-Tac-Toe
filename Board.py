@@ -5,9 +5,11 @@ class Board():
     Represents a square board of size n that players can mark their symbol on
     to play Tic-Tac-Toe
     """
-    def __init__(self, size):
-        self.board = [['.' for i in range(size)] for j in range(size)]
+
+    def __init__(self, size, emptyBoardSpace):
+        self.board = [[emptyBoardSpace for i in range(size)] for j in range(size)]
         self.numMoves = 0
+        self.emptyBoardSpace = emptyBoardSpace
 
     def printBoard(self):
         print("\nHere's the current board:")
@@ -35,24 +37,36 @@ class Board():
         Validate that the coordinate is a valid position on the board
         and unoccupied
         """
-        if coordinate.x < 0 or coordinate.x >= len(self.board) or coordinate.y < 0 or coordinate.y >= len(self.board):
+        xNotInBoardRange = coordinate.x < 0 or coordinate.x >= len(self.board)
+        yNotInBoardRange = coordinate.y < 0 or coordinate.y >= len(self.board)
+
+        if xNotInBoardRange or yNotInBoardRange:
             raise InvalidActionError("Error: Please enter a coordinate x,y with values between 1 and " + str(len(self.board)))
         
-        elif self.board[coordinate.x][coordinate.y] != '.':
+        elif self.board[coordinate.x][coordinate.y] != self.emptyBoardSpace:
             raise InvalidActionError("Error: There is already a piece at this position. Try again")
 
     def hasWon(self):
         return self.checkRows() or self.checkColumns() or self.checkDiagonals()
 
+    def checkAllElementsSame(self, lst):
+        """
+        Check that all elements of a list are the same and not empty spaces
+        """
+        numUniqueElements = len(set(lst))
+        firstElementNotEmptySpace = lst[0] != self.emptyBoardSpace
+        if numUniqueElements == 1 and firstElementNotEmptySpace:
+            return True
+
     def checkRows(self):
         for row in self.board:
-            if row[1:] == row[:-1] and row[0] != '.':
+            if self.checkAllElementsSame(row):
                 return True
 
     def checkColumns(self):
         tBoard = map(list, zip(*self.board))
         for col in tBoard:
-            if col[1:] == col[:-1] and col[0] != '.':
+            if self.checkAllElementsSame(col):
                 return True
 
     def checkDiagonals(self):
@@ -61,8 +75,7 @@ class Board():
         for i in range(0, len(self.board)):
             diagLeftRight.append(self.board[i][i])
             diagRightLeft.append(self.board[i][len(self.board)-i-1])
-        if diagLeftRight[1:] == diagLeftRight[:-1] and diagLeftRight[0] != '.' or \
-            diagRightLeft[1:] == diagRightLeft[:-1] and diagRightLeft[0] != '.':
+        if self.checkAllElementsSame(diagLeftRight) or self.checkAllElementsSame(diagRightLeft):
             return True
 
     def hasDrawn(self):
