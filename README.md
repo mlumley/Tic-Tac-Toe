@@ -2,11 +2,11 @@
 
 Requires Python 3.7
 
-To run, open the directory you cloned the repository and run ticTacToe.py
+To run, open the directory you cloned the repository and run TicTacToe.py
 
 Using
 ```bash
-python3 ticTacToe.py
+python3 TicTacToe.py
 ```
 
 Coordinates must be in the following format to be accepted:
