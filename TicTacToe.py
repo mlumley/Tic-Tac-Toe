@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from Player import Player
 from Board import Board
 from UserInput import UserInput
