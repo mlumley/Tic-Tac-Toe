@@ -2,7 +2,7 @@
 
 Requires Python 3.7
 
-To run, open the directory you cloned the repo and run ticTacToe.py
+To run, open the directory you cloned the repository and run ticTacToe.py
 
 Using
 ```bash

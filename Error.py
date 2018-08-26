@@ -4,6 +4,7 @@ class Error(Exception):
     """
     pass
 
+
 class InvalidActionError(Error):
     """
     Raised when a player attempts to make an invalid move such as:
@@ -12,12 +13,14 @@ class InvalidActionError(Error):
     """
     pass
 
+
 class InvalidCoordinateValueError(Error):
     """
     Raised when the x and y values for a coordinate are not
     positive integers
     """
     pass
+
 
 class InvalidCoordinateLengthError(Error):
     """

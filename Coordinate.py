@@ -1,9 +1,11 @@
 from Error import InvalidCoordinateValueError
 
+
 class Coordinate():
     """
     Represents a x, y coordinate
     """
+
     def __init__(self, x, y):
         self.x = self.validate(x)
         self.y = self.validate(y)
@@ -15,7 +17,12 @@ class Coordinate():
         try:
             return int(val)
         except:
-            raise InvalidCoordinateValueError("Error: Invalid coordinate values. Coordinates should be integer values")
+            raise InvalidCoordinateValueError(
+                (
+                    Error: Invalid coordinate values.
+                    Coordinates should be integer values
+                )
+            )
 
     def subtract(self, val):
         """

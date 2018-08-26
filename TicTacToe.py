@@ -7,6 +7,7 @@ from Error import Error
 
 BOARD_SIZE = 3
 
+
 def main():
     """
     Contains the main game loop
@@ -33,7 +34,12 @@ def main():
             continue
 
         if board.hasWon():
-            print("Well done Player " + currentPlayer.id + ", you've won the game!")
+            print(
+                (
+                    "Well done Player " + currentPlayer.id +
+                    ", you've won the game!"
+                )
+            )
             board.printBoard()
             exit()
 
@@ -46,5 +52,6 @@ def main():
             currentPlayer = player2
         else:
             currentPlayer = player1
+
 
 main()
