@@ -17,13 +17,6 @@ class Coordinate():
         except:
             raise InvalidCoordinateValueError("Error: Invalid coordinate values. Coordinates should be integer values")
 
-    def add(self, val):
-        """
-        Add val to x and y
-        """
-        self.x = self.x + val
-        self.y = self.y + val
-
     def subtract(self, val):
         """
         Subtract val from x and y
