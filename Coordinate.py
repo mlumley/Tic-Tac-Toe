@@ -19,8 +19,8 @@ class Coordinate():
         except:
             raise InvalidCoordinateValueError(
                 (
-                    Error: Invalid coordinate values.
-                    Coordinates should be integer values
+                    "Error: Invalid coordinate values."
+                    " Coordinates should be integer values"
                 )
             )
 

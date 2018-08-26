@@ -22,12 +22,12 @@ class UserInput():
         )
 
         if action == 'q':
-            print("Exiting")
-            exit()
+            self.exitGame()
 
         action = action.split(',')
+        numCoordinate = len(action)
 
-        if len(action) != 2:
+        if numCoordinate != 2:
             raise InvalidCoordinateLengthError(
                 (
                     "Error: Invalid coordinate length. "
@@ -35,7 +35,14 @@ class UserInput():
                 )
             )
         else:
-            coord = Coordinate(action[0], action[1])
-            # Convert coordinate from 1 based to 0 based
-            coord.subtract(1)
-            return coord
+            return self.listToCoordinate(action)
+
+    def exitGame(self):
+        print("Exiting")
+        exit()
+
+    def listToCoordinate(self, lst):
+        coord = Coordinate(lst[0], lst[1])
+        # Convert coordinate from 1 based to 0 based
+        coord.subtract(1)
+        return coord
