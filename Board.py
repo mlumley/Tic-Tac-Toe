@@ -63,8 +63,8 @@ class Board():
         Check that all elements of a list are the same and not empty spaces
         """
         numUniqueElements = len(set(lst))
-        firstElementNotEmptySpace = lst[0] != self.emptyBoardSpace
-        if numUniqueElements == 1 and firstElementNotEmptySpace:
+        notEmptySpace = lst[0] != self.emptyBoardSpace
+        if numUniqueElements == 1 and notEmptySpace:
             return True
 
     def checkRows(self):
